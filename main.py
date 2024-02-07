@@ -1,12 +1,10 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('salaries.csv')
 
-#x = df.iloc[0, 1]
-x = df.iloc[:3, :2]
-#print(x)
+x = df.iloc[:, :-1].values
+y = df.iloc[:, :-1].values
 
-#y = df.iloc[:, -1]
-y = df.iloc[:, -1].values
-# print(y)
-print(y[0:5])
+plt.scatter(x, y)
+plt.show()
